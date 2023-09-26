@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&family=Zeyada&display=swap');
 :root {
-  --primary-color: #011627;
-  --secondary-color: #0a1f30;
-  --font-primary: #e0e8f0;
+  --primaryColor: #011627;
+  --secondaryColor: #0a1f30;
+  --fontPrimary: #e0e8f0;
+
+  --fontLogo: 'Zeyada', cursive;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: var(--font-primary);
-  background-color: var(--primary-color);
+  color: var(--fontPrimary);
+  background-color: var(--primaryColor);
 
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -34,10 +36,8 @@ header {
 }
 
 nav,
-ul,
-li {
+ul {
   display: flex;
-  flex-direction: row;
   gap: 40px;
 }
 
@@ -45,25 +45,65 @@ a {
   text-decoration: none;
 }
 
+nav a {
+  text-decoration: none;
+
+  color: #4a7ea5;
+  transition: ease-in-out all 0.5s;
+}
+
+a:hover {
+  color: var(--fontPrimary);
+}
+
+li {
+  list-style: decimal-leading-zero;
+  font-size: smaller;
+}
+
+.logo {
+  font-family: var(--fontLogo);
+}
+
 .container {
   position: relative;
+  display: flex;
+  height: 50vh;
 }
 
 .vertical-line {
-  top: 20%;
-  right: 10%;
-  position: absolute;
-  background-color: var(--font-primary);
-  height: 400px;
-  width: 1px;
+  bottom: 160px;
+  right: -120px;
+  position: fixed;
+  gap: 20px;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  rotate: -90deg;
 }
 
-.vertical-link {
-  padding: 20px 0;
-  margin-left: -25px;
+.vertical-line .line {
+  width: 100px;
+  height: 1px;
+  background-color: var(--fontPrimary);
+}
+
+/* .vertical-link {
+  padding: 20px 20px;
+  margin-left: -135px;
+  rotate: -90deg;
+} */
+
+.profile {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.text h1 {
+  font-size: xx-large;
 }
