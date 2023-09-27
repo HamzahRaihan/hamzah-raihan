@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Navbar -->
     <header>
       <h2 class="logo">
         <a href="index.html"><img src="./img/icon/favicon-32x32.png" alt="" /></a>
       </h2>
       <nav>
-        <ul>
+        <ol start="0">
+          <li>
+            <a href="">Home</a>
+          </li>
           <li>
             <a href="">About</a>
           </li>
@@ -26,13 +30,17 @@
           <li>
             <a href="">Blog</a>
           </li>
-        </ul>
+        </ol>
       </nav>
     </header>
+    <!-- End of navbar -->
+
     <!-- particles.js container -->
     <div id="particles-js"></div>
+    <!-- End of particles.js -->
+
     <main>
-      <section class="container">
+      <section class="hero-section container">
         <div class="vertical-line">
           <div class="line"></div>
           <a href="mailto:hamzahraihanif@gmail.com" class="vertical-link">hamzahraihanif@gmail.com</a>
@@ -41,8 +49,9 @@
           <div class="text">
             <h4>Hi, my name is</h4>
             <h1>Hamzah Raihan</h1>
-            <h1>A Front-End developer</h1>
+            <h1>Front-End developer</h1>
             <p>a highly motivated college student with a passion for web development. I am currently seeking new opportunities to expand my skills and contribute to the field of technology.</p>
+            <a class="btn-primary">Discover More!</a>
           </div>
         </div>
         <div class="vertical-line-2">
@@ -93,15 +102,19 @@
               <path
                 d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
               />
+              c
             </svg>
           </a>
         </div>
       </section>
+
+      <section class="about-section container"></section>
     </main>
 
     <footer>
       <section class="author">&copy; 2023 Hamzah Raihan</section>
     </footer>
+
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="script.js"></script>
