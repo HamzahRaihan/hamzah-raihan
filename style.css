@@ -13,7 +13,6 @@
   margin: 0;
   box-sizing: border-box;
   color: var(--fontPrimary);
-  background-color: var(--primaryColor);
 
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -26,6 +25,8 @@
 body {
   max-width: 1100px;
   margin: auto;
+  background-color: var(--primaryColor);
+  position: relative;
 }
 
 header {
@@ -33,6 +34,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
+  z-index: 9999;
 }
 
 nav,
@@ -66,9 +68,8 @@ li {
 }
 
 .container {
-  position: relative;
   display: flex;
-  height: 50vh;
+  height: 70vh;
 }
 
 .vertical-line {
@@ -98,12 +99,45 @@ li {
 .profile {
   display: flex;
   flex-direction: row wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 0 40px;
   width: 100%;
 }
 
+.text {
+  width: 100%;
+}
+
 .text h1 {
   font-size: xx-large;
+}
+
+.image-profile {
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.image-profile img {
+  transform: scaleX(-1);
+  background: 0;
+}
+.image-profile svg {
+  position: absolute;
+  top: -60px;
+  background: 0;
+  filter: blur(100%);
+  width: 80%;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
