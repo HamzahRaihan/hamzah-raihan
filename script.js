@@ -1,3 +1,4 @@
+// * Particles JS Library
 particlesJS('particles-js', {
   particles: {
     number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -15,21 +16,66 @@ particlesJS('particles-js', {
   },
   retina_detect: true,
 });
-let count_particles, stats, update;
-stats = new Stats();
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
-count_particles = document.querySelector('.js-count-particles');
-update = function () {
-  stats.begin();
-  stats.end();
-  const particlesArray = window.pJSDom?.[0]?.pJS?.particles?.array;
-  if (particlesArray) {
-    count_particles.innerText = particlesArray.length;
+
+// * Typing Animation
+const dynamicText = document.querySelector('h2 span');
+const wordArray = ['Front-End Developer', 'Back-End Developer', 'UI Designer'];
+
+// variables to track position and deletion status of the word
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleteing = false;
+
+const typeEffect = () => {
+  const currentWord = wordArray[wordIndex];
+  const currentChar = currentWord.substring(0, charIndex);
+  dynamicText.textContent = currentChar;
+  dynamicText.classList.add('stop-blinkinng');
+
+  if (!isDeleteing && charIndex < currentWord.length) {
+    // if true, type the next word
+    charIndex++;
+    setTimeout(typeEffect, 100);
+  } else if (isDeleteing && charIndex > 0) {
+    // if condition is true, remove the previous word
+    charIndex--;
+    setTimeout(typeEffect, 20);
+  } else {
+    // word is deleted, switch to the next word
+    isDeleteing = !isDeleteing;
+    dynamicText.classList.remove('stop-blinking');
+    wordIndex = !isDeleteing ? (wordIndex + 1) % wordArray.length : wordIndex;
+    setTimeout(typeEffect, 1200);
   }
-  requestAnimationFrame(update);
 };
-requestAnimationFrame(update);
+
+typeEffect();
+
+// * Navbar Animation
+const navbar = document.querySelector('.navbar');
+let previousScrollPosition = window.scrollY;
+
+function hideNavbar() {
+  navbar.classList.add('hide');
+  navbar.classList.remove('show');
+}
+function showNavbar() {
+  navbar.classList.remove('show');
+  navbar.classList.remove('hide');
+}
+function showNavbarBlur() {
+  navbar.classList.add('show');
+  navbar.classList.remove('hide');
+}
+
+window.addEventListener('scroll', () => {
+  let currentScrollPosition = window.scrollY;
+  if (currentScrollPosition == 0) {
+    showNavbar();
+  } else if (previousScrollPosition < currentScrollPosition) {
+    hideNavbar();
+  } else {
+    showNavbarBlur();
+  }
+  previousScrollPosition = currentScrollPosition;
+});

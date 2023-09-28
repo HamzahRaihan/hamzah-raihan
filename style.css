@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  max-width: 1100px;
+  /* max-width: 1100px; */
   min-height: 100%;
   margin: auto;
   background-color: var(--primaryColor);
@@ -45,6 +45,34 @@ header {
   align-items: center;
   padding: 20px;
   z-index: 9999;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  transition: all 0.5s;
+  width: 100%;
+  padding: 20px 50px;
+}
+
+.navbar.show {
+  top: 0;
+  height: 80px;
+  background-color: rgba(1, 22, 39, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
+}
+
+.navbar.hide {
+  top: -100px;
+  background-color: rgba(1, 22, 39, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
 }
 
 @media screen and (max-width: 900px) {
@@ -92,8 +120,31 @@ li {
 
 .container {
   display: flex;
-  min-height: 450px;
+  margin: auto;
+  max-width: 1100px;
+  min-height: 500px;
+  margin-top: 100px;
   flex-grow: 1;
+}
+
+h2 span {
+  color: var(--fontPrimary);
+}
+
+h2 span:last-child {
+  height: 30px;
+  width: 2px;
+  transform: translateY(-45%);
+  animation: blink 0.7s infinite;
+}
+
+h2 span.stop-blinking::before {
+  animation: none;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 /*=============================================
