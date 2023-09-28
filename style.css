@@ -24,6 +24,10 @@ html {
   height: 100%;
 }
 
+svg {
+  fill: var(--fontPrimary);
+}
+
 body {
   /* max-width: 1100px; */
   min-height: 100%;
@@ -32,6 +36,20 @@ body {
   position: relative;
   display: flex;
   flex-flow: column;
+}
+
+.headline {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  gap: 20px;
+  align-items: center;
+}
+
+.headline .text-line {
+  width: 30%;
+  height: 1px;
+  background-color: var(--fontPrimary);
 }
 
 /*=============================================
@@ -120,11 +138,13 @@ li {
 
 .container {
   display: flex;
+  flex-direction: column;
   margin: auto;
   max-width: 1100px;
   min-height: 500px;
   margin-top: 100px;
   flex-grow: 1;
+  padding: 0 15px;
 }
 
 h2 span {
@@ -243,8 +263,8 @@ h2 span.stop-blinking::before {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
   max-width: 700px;
+  height: 400px;
 }
 
 .text {
@@ -277,7 +297,7 @@ h2 span.stop-blinking::before {
   width: 80%;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
   .vertical-line,
   .vertical-line-2 {
     display: none;
@@ -294,6 +314,101 @@ h2 span.stop-blinking::before {
 
 /*=====  End of Landing Page           ======*/
 
+/*=============================================
+=            About Page                      =
+=============================================*/
+
+.about-section a {
+  margin: auto;
+  z-index: 1;
+}
+
+.project {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 40px 0;
+  z-index: 1;
+}
+
+.project img {
+  width: 50%;
+  border-radius: 12px;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: right;
+}
+.project-box {
+  background-color: var(--primaryColor);
+  box-shadow: #011627;
+  box-shadow: 0px 0px 27px -7px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 2px 2px 27px -7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 2px 2px 27px -7px rgba(0, 0, 0, 1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-left: -40px;
+  z-index: 10;
+}
+
+.list ul {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row;
+  gap: 5px;
+}
+
+.list li {
+  list-style: none !important;
+  text-decoration: none !important;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: default;
+}
+
+.project-tech li:hover {
+  background-color: #030c13;
+}
+
+.project:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+.project:nth-child(2n + 1) .project-description {
+  padding-right: 20px;
+}
+.project:nth-child(2n + 1) .project-box {
+  margin-right: -50px;
+  margin-left: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .project {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .project img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  .project-box {
+    margin: 0;
+  }
+  .project:nth-child(2n + 1) {
+    flex-direction: column;
+  }
+  .project:nth-child(2n + 1) .project-description {
+    padding-right: 20px;
+  }
+  .project:nth-child(2n + 1) .project-box {
+    margin: 0;
+  }
+}
+
+/*=====  End of About Page  ======*/
+
 /* ---- particles.js container ---- */
 #particles-js {
   position: absolute;
@@ -305,13 +420,35 @@ h2 span.stop-blinking::before {
   background-position: 50% 50%;
 }
 
-/* footer */
+/*=============================================
+=            Footer section            =
+=============================================*/
 .author {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 20px;
+  width: 100%;
+}
+
+.footer-link {
+  display: none;
 }
 
 footer {
   margin-top: auto;
 }
+
+@media screen and (max-width: 1200px) {
+  .footer-link {
+    display: flex;
+    border-top: 1px solid var(--fontPrimary);
+    margin-top: 20px;
+    padding: 20px 100px;
+    gap: 20px;
+    z-index: 1;
+  }
+}
+
+/*=====  End of Footer section  ======*/
