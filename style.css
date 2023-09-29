@@ -3,7 +3,10 @@
 :root {
   --primaryColor: #011627;
   --secondaryColor: #0a1f30;
+  --thirdColor: #011e36;
+
   --fontPrimary: #e0e8f0;
+  --fontSecondary: #a1afbd;
 }
 
 * {
@@ -35,78 +38,97 @@ body {
   background-color: var(--primaryColor);
   position: relative;
   display: flex;
+  align-items: center;
   flex-flow: column;
 }
 
-.headline {
+.container {
   display: flex;
-  width: 100%;
-  height: fit-content;
-  gap: 20px;
-  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1100px;
+  min-height: 450px;
+  margin-top: 100px;
+  flex-grow: 1;
+  padding: 0 15px;
 }
 
-.headline .text-line {
-  width: 30%;
-  height: 1px;
-  background-color: var(--fontPrimary);
+/*=============================================
+=            scrollbar styling           =
+=============================================*/
+::-webkit-scrollbar {
+  width: 7px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey; */
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--thirdColor);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #04345ca8;
+}
+/*=====  End of scrollbar styling ======*/
+
+/*=============================================
+=                    button sytle            =
+=============================================*/
+
+.btn-primary {
+  margin-top: 20px;
+  border: 2px #e0e8f0 solid;
+  border-radius: 6px;
+  color: var(--fontPrimary);
+  padding: 10px 30px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn-primary:hover {
+  background-color: #e0e8f0;
+  color: var(--primaryColor);
+  border: 2px solid;
+}
+
+.btn-primary:active {
+  background-color: #e0e8f0a8;
+  border: 2px solid;
+}
+
+.btn-secondary {
+  margin-top: 20px;
+  border: 2px var(--primaryColor) solid;
+  border-radius: 6px;
+  color: var(--primaryColor);
+  padding: 10px 30px;
+  cursor: pointer;
+  width: fit-content;
+  background-color: none;
+}
+
+.btn-secondary:hover {
+  color: var(--primaryColor);
+  background-color: #e0e8f05b;
+  border: 2px solid #e0e8f05b;
+}
+
+.btn-secondary:active {
+  border: 2px solid;
+}
+
+/*=====  End of button sytle  ======*/
 
 /*=============================================
 =            Nav Header                   =
 =============================================*/
-
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  z-index: 9999;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  height: 100px;
-  transition: all 0.5s;
-  width: 100%;
-  padding: 20px 50px;
-}
-
-.navbar.show {
-  top: 0;
-  height: 80px;
-  background-color: rgba(1, 22, 39, 0.1);
-  backdrop-filter: blur(10px);
-  box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
-  -webkit-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
-  -moz-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
-}
-
-.navbar.hide {
-  top: -100px;
-  background-color: rgba(1, 22, 39, 0.1);
-  backdrop-filter: blur(10px);
-  box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
-  -webkit-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
-  -moz-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
-}
-
-@media screen and (max-width: 900px) {
-  header {
-    background-color: var(--primaryColor);
-  }
-}
-
-/*=====  End of Nav Header   ======*/
-
-header,
-footer {
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
 nav,
 ol {
   display: flex;
@@ -136,67 +158,43 @@ li {
   font-size: smaller;
 }
 
-.container {
+header {
   display: flex;
-  flex-direction: column;
-  margin: auto;
-  max-width: 1100px;
-  min-height: 500px;
-  margin-top: 100px;
-  flex-grow: 1;
-  padding: 0 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 2;
 }
 
-h2 span {
-  color: var(--fontPrimary);
+.navbar {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  transition: all 0.5s;
+  width: 100%;
+  padding: 0 50px;
 }
 
-h2 span:last-child {
-  height: 30px;
-  width: 2px;
-  transform: translateY(-45%);
-  animation: blink 0.7s infinite;
+.navbar.show {
+  top: 0;
+  height: 80px;
+  background-color: rgba(1, 22, 39, 0.5);
+  backdrop-filter: blur(20px);
+  box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
 }
 
-h2 span.stop-blinking::before {
-  animation: none;
-}
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-/*=============================================
-=                    button sytle            =
-=============================================*/
-
-.btn-primary {
-  margin-top: 20px;
-  border: 2px #e0e8f0 solid;
-  border-radius: 6px;
-  color: var(--fontPrimary);
-  padding: 10px 30px;
-  cursor: pointer;
-  width: fit-content;
+.navbar.hide {
+  top: -100px;
+  background-color: rgba(1, 22, 39, 0.5);
+  backdrop-filter: blur(20px);
+  box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: 2px 10px 30px -12px rgba(0, 0, 0, 0.46);
 }
 
-.btn-primary:hover {
-  background-color: #e0e8f0;
-  color: var(--primaryColor);
-  border: 2px solid;
-}
-
-.btn-primary:active {
-  background-color: #e0e8f0a8;
-  border: 2px solid;
-}
-
-/*=====  End of button sytle  ======*/
-
-/*=============================================
-=            Navbar                          =
-=============================================*/
 .logo {
   font-family: var(--fontLogo);
   color: var(--primaryColor);
@@ -212,7 +210,148 @@ h2 span.stop-blinking::before {
   }
 }
 
-/*=====  End of Navbar  ======*/
+.dropdown-button {
+  display: none;
+}
+
+.dropdown-button.exit {
+  display: none;
+}
+
+.sidebar {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: -80%;
+  width: 80%;
+  height: 100%;
+  background-color: var(--thirdColor);
+  z-index: 3;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: larger;
+}
+
+.sidebar-links ol {
+  list-style: none;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100px;
+  gap: 20px;
+}
+
+.sidebar-links li {
+  list-style: none;
+}
+
+.sidebar-links a {
+  color: var(--fontSecondary);
+  transition: ease 0.3s;
+}
+
+.sidebar-links a:hover {
+  color: var(--fontPrimary);
+}
+
+.aside a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: 1px solid #2d3e4d;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primaryColor);
+  transition: ease 1s;
+}
+
+.aside a:hover {
+  transform: rotate(360deg);
+}
+
+.sidebar .author {
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.overlay {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navbar li {
+    display: none;
+  }
+
+  .dropdown-button svg {
+    width: 2rem;
+    height: 100%;
+  }
+
+  .dropdown-button {
+    display: flex;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .dropdown-button.hide {
+    display: none;
+  }
+
+  .dropdown-button.exit {
+    display: flex;
+    margin-left: auto;
+    padding: 30px 15px;
+  }
+
+  .dropdown-button.exit svg {
+    width: 1.5rem;
+  }
+
+  .overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #011627d5;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .overlay.active {
+    display: block;
+  }
+
+  .sidebar {
+    display: flex;
+  }
+
+  .sidebar.active {
+    right: 0;
+  }
+}
+
+/*=====  End of Nav Header   ======*/
+
+header,
+footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
 
 /*=============================================
 =            Landing Page                    =
@@ -315,10 +454,50 @@ h2 span.stop-blinking::before {
 /*=====  End of Landing Page           ======*/
 
 /*=============================================
-=            About Page                      =
+=            typing animation            =
 =============================================*/
 
-.about-section a {
+h2 span {
+  color: var(--fontPrimary);
+}
+
+h2 span:last-child {
+  height: 30px;
+  width: 2px;
+  transform: translateY(-45%);
+  animation: blink 0.7s infinite;
+}
+
+h2 span.stop-blinking::before {
+  animation: none;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/*=====  End of typing animation  ======*/
+
+/*=============================================
+=            Project Section                      =
+=============================================*/
+
+.headline {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  gap: 20px;
+  align-items: center;
+}
+
+.headline .text-line {
+  width: 30%;
+  height: 1px;
+  background-color: var(--fontPrimary);
+}
+
+.project-section a {
   margin: auto;
   z-index: 1;
 }
@@ -331,8 +510,33 @@ h2 span.stop-blinking::before {
 }
 
 .project img {
-  width: 50%;
+  width: 100%;
   border-radius: 12px;
+  object-fit: cover;
+}
+
+.image-project {
+  position: relative;
+}
+
+.image-project .overlay-project {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0;
+}
+
+.image-project .overlay-project:hover {
+  background-color: rgba(0, 0, 0, 0.11);
+  z-index: 1;
+  opacity: 1;
 }
 
 .project-description {
@@ -375,10 +579,9 @@ h2 span.stop-blinking::before {
 
 .project:nth-child(2n + 1) {
   flex-direction: row-reverse;
+  gap: 20px;
 }
-.project:nth-child(2n + 1) .project-description {
-  padding-right: 20px;
-}
+
 .project:nth-child(2n + 1) .project-box {
   margin-right: -50px;
   margin-left: 0;
@@ -387,29 +590,33 @@ h2 span.stop-blinking::before {
 @media screen and (max-width: 1200px) {
   .project {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    margin: 20px 0;
   }
+
   .project img {
     width: 100%;
     border-radius: 12px;
   }
+
   .project-box {
     margin: 0;
   }
+
   .project:nth-child(2n + 1) {
     flex-direction: column;
   }
-  .project:nth-child(2n + 1) .project-description {
-    padding-right: 20px;
-  }
+
   .project:nth-child(2n + 1) .project-box {
     margin: 0;
   }
 }
 
-/*=====  End of About Page  ======*/
+/*=====  End of Project section  ======*/
 
-/* ---- particles.js container ---- */
+/*=============================================
+=            particle js library            =
+=============================================*/
 #particles-js {
   position: absolute;
   width: 100%;
@@ -419,6 +626,7 @@ h2 span.stop-blinking::before {
   background-size: cover;
   background-position: 50% 50%;
 }
+/*=====  End of particle js library  ======*/
 
 /*=============================================
 =            Footer section            =
@@ -445,7 +653,7 @@ footer {
     display: flex;
     border-top: 1px solid var(--fontPrimary);
     margin-top: 20px;
-    padding: 20px 100px;
+    padding: 20px 10%;
     gap: 20px;
     z-index: 1;
   }

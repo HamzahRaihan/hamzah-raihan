@@ -79,3 +79,27 @@ window.addEventListener('scroll', () => {
   }
   previousScrollPosition = currentScrollPosition;
 });
+
+// * Burger Button
+
+const burgerButton = document.querySelector('.dropdown-button');
+const exitButton = document.querySelector('.exit');
+const sidebar = document.querySelector('.sidebar');
+const overlay = document.querySelector('.overlay');
+
+function toggleBurgerButton() {
+  burgerButton.classList.toggle('hide');
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+  if (sidebar.classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
+}
+
+burgerButton.addEventListener('click', () => toggleBurgerButton());
+
+exitButton.addEventListener('click', () => toggleBurgerButton());
+
+overlay.addEventListener('click', () => toggleBurgerButton());
