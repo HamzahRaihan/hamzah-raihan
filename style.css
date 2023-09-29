@@ -167,6 +167,11 @@ header {
   z-index: 2;
 }
 
+.navbar a.active,
+.sidebar a.active {
+  color: var(--fontPrimary);
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -613,6 +618,65 @@ h2 span.stop-blinking::before {
 }
 
 /*=====  End of Project section  ======*/
+
+/*=============================================
+=            about me section            =
+=============================================*/
+
+.about-me {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 20px;
+  gap: 100px;
+}
+
+.about-me .introduction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-flow: row nowrap;
+}
+
+.about-me .headline {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.about-me .icons {
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: 97%;
+  rotate: 49.5deg;
+}
+
+.about-me .icons img {
+  width: 40px;
+  rotate: 309deg;
+  margin: 5px;
+  transition: ease 0.5s;
+}
+
+.about-me .icons img:hover {
+  transform: scale(150%);
+}
+
+@media screen and (max-width: 1200px) {
+  .about-me .icons {
+    width: 200px;
+    flex-basis: 10%;
+  }
+  .about-me .icons img:nth-child(3n + 1) {
+    display: none;
+  }
+  .about-me .introduction {
+    flex-flow: column-reverse nowrap;
+  }
+}
+
+/*=====  End of about section  ======*/
 
 /*=============================================
 =            particle js library            =
