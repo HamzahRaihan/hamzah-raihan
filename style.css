@@ -49,7 +49,6 @@ body {
   margin: auto;
   max-width: 1100px;
   width: 100%;
-  min-height: 450px;
   margin-top: 100px;
   flex-grow: 1;
   padding: 0 15px;
@@ -877,6 +876,61 @@ article {
 }
 
 /*=====  End of experience section  ======*/
+
+/*=============================================
+=            Techn Stack Section            =
+=============================================*/
+
+.tech-stack {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  z-index: 1;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.card-container .card {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 5px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--fontPrimary);
+  width: calc(25% - 10px);
+  margin-bottom: 20px;
+  cursor: default;
+  position: relative;
+  transition: ease 0.5s;
+}
+
+.card .language {
+  transform: translateY(10px);
+}
+
+.card:hover .language {
+  transform: translateY(-1px);
+}
+
+.card .level {
+  opacity: 0;
+  transform: translateX(20px);
+  color: var(--fontThird);
+}
+.card:hover .level {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.card-container .card:hover {
+  background-color: var(--thirdColor);
+}
+
+/*=====  End of Techn Stack Section  ======*/
 
 /*=============================================
 =            particle js library            =

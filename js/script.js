@@ -310,13 +310,13 @@ function certification() {
        <a href="https://drive.google.com/file/d/13-ZbZCOXADuZmcgusUFv8Js62NvCJ4vw/view?usp=sharing" target="_blank" rel="noopener noreferrer">Basic Web Programming</a>
       </li>
       <li>
-       <a href=""target="_blank" rel="noopener noreferrer">Cloud Practitioner Essentials</a>
+       <a href="https://drive.google.com/file/d/1ks79PN8v5HAVjP1PcKm5V2OpQg_kPIH0/view?usp=sharing" target="_blank" rel="noopener noreferrer">Cloud Practitioner Essentials</a>
       </li>
       <li>
-       <a href=""target="_blank" rel="noopener noreferrer">Back-End for Beginner</a>
+       <a href="https://drive.google.com/file/d/1Q_Cb1eM1f7rj-1nmW_cbr1lIaYNm1T0X/view?usp=sharing" target="_blank" rel="noopener noreferrer">Back-End for Beginner</a>
       </li>
       <li>
-       <a href=""target="_blank" rel="noopener noreferrer">Basic Javascript</a>
+       <a href="https://drive.google.com/file/d/1QFVXh2ynRvtIkRoO3UzsjillNSLUAHPo/view?usp=sharing" target="_blank" rel="noopener noreferrer">Basic Javascript</a>
       </li>
       <div class="tech-learnt list">
       <h4>Technologies learnt</h4>
@@ -335,6 +335,99 @@ function certification() {
         </li>
         <li>
           <img src="./svg/icons8-amazon-web-services.svg" alt="image" width="34" />
+        </li>
+      </ul>
+    </div>
+    </ul>
+  </div>
+  <div class="detail">
+    <div class="title">
+      <h1>Course</h1>
+      <a href="https://www.instagram.com/skilvul/" target="_blank" rel="noopener noreferrer">
+       <h1 class="place">@Skilvul</h1>
+      </a>
+    </div>
+    <ul>
+      <li>
+       <a href="https://badgr.com/public/assertions/ilsKGOYOS2Sb5EKsvyt6vA?identity__email=hamzahraihanif@gmail.com" target="_blank" rel="noopener noreferrer">
+        Basic HTML (Gold)
+       </a>
+      </li>
+      <li>
+       <a href="https://badgr.com/public/assertions/e9S1oovgQsC6PDh-NT4MVw?identity__email=hamzahraihanif@gmail.com" target="_blank" rel="noopener noreferrer">
+        Basic CSS (Gold)
+       </a>
+      </li>
+      <li>
+       <a href="https://badgr.com/public/assertions/D_B6919AQRGJTDPOxBdTUA?identity__email=hamzahraihanif@gmail.com" target="_blank" rel="noopener noreferrer">
+        Basic Javascript (Gold)
+       </a>
+      </li>
+      <li>
+       <a href="https://badgr.com/public/assertions/iUWJxGs_SwO--_t7aeEYYQ?identity__email=hamzahraihanif@gmail.com" target="_blank" rel="noopener noreferrer">
+        Web Development Challenge (Silver)
+       </a>
+      </li>
+      <div class="tech-learnt list">
+      <h4>Technologies learnt</h4>
+      <ul>
+        <li>
+          <img src="./svg/icons8-css.svg" alt="image" width="34" />
+        </li>
+        <li>
+          <img src="./svg/icons8-html-5.svg" alt="image" width="34" />
+        </li>
+        <li>
+          <img src="./svg/icons8-javascript.svg" alt="image" width="34" />
+        </li>
+      </ul>
+    </div>
+    </ul>
+  </div>
+  <div class="detail">
+    <div class="title">
+      <h1>Course</h1>
+      <a href="https://www.sololearn.com/" target="_blank" rel="noopener noreferrer">
+       <h1 class="place">@Sololearn</h1>
+      </a>
+    </div>
+    <ul>
+      <li>
+       <a href="https://drive.google.com/file/d/18x0Rq7irUdKXFOddq55ICkmeR9HCT6gi/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        CSS Course
+       </a>
+      </li>
+      <div class="tech-learnt list">
+      <h4>Technologies learnt</h4>
+      <ul>
+        <li>
+          <img src="./svg/icons8-css.svg" alt="image" width="34" />
+        </li>
+      </ul>
+    </div>
+    </ul>
+  </div>
+  <div class="detail">
+    <div class="title">
+      <h1>Course</h1>
+      <a href="https://www.sololearn.com/" target="_blank" rel="noopener noreferrer">
+       <h1 class="place">@Progate</h1>
+      </a>
+    </div>
+    <ul>
+      <li>
+       <a href="https://drive.google.com/file/d/1Fmi4YfOLrz9q5Mn2Fw-a4PesQ1ngPuTG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+       Introduction to Programming Using HTML and CSS
+       </a>
+      </li>
+      <div class="tech-learnt list">
+      <h4>Technologies learnt</h4>
+      <ul>
+        <li>
+          <img src="./svg/icons8-css.svg" alt="image" width="34" />
+        </li>
+        <li>
+          <img src="./svg/icons8-html-5.svg" alt="image" width="34" />
         </li>
       </ul>
     </div>
