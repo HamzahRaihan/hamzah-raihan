@@ -185,6 +185,26 @@ const projects = [
     stack: ['codeigniter.svg', 'icons8-bootstrap.svg'],
     category: 'website',
   },
+  {
+    id: 11,
+    name: 'Halo Medis',
+    image: 'halomedis.png',
+    github: '',
+    link: '',
+    desc: 'Halo Medis was designed for my university project. I was told to create a prototype for a topic that already been decided by lecturer. It was my first figma project.',
+    stack: ['icons8-figma.svg'],
+    category: 'uidesign',
+  },
+  {
+    id: 12,
+    name: 'Japan Blog',
+    image: 'japanblog.png',
+    github: '',
+    link: '',
+    desc: 'This UI Design was made by me to learn more about figma. This is UI Design for landing page of Japan Blog website',
+    stack: ['icons8-figma.svg'],
+    category: 'uidesign',
+  },
 ];
 
 console.log(projects[1].stack);
