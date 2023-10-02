@@ -210,21 +210,107 @@ const projects = [
 const blog = [
   {
     blogId: 1,
-    name: 'I made new york times clone using javascript!',
+    name: 'Building a New York Times Clone Website from Scratch with JavaScript, CSS, and HTML',
     image: 'newsapp.png',
-    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa minima in amet at alias! Magni, laudantium? Error sed provident saepe optio ad, aspernatur dignissimos pariatur, ex maxime consequuntur doloremque quaerat.',
-    detail: `<h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsum ea, quod consequatur explicabo obcaecati non corporis, delectus ad optio ratione, possimus dignissimos. Quos commodi amet tempore iure ex consectetur!
-          </h1>`,
+    desc: "This is my first clone website made by nothing but JavaScript, CSS, and HTML. It took me quite some times to make, but it's worth it since i have to keep practicing my skills in web development.",
+    detail: `
+    <div class="card-image article">
+      <img src="./img/newsapp.png" alt="image" loading="lazy" decoding="async" />
+    </div>
+    <div class="card-body">
+      <div class="card-detail">
+        <div class="title article">
+          <h1>Building a New York Times Clone Website from Scratch with JavaScript, CSS, and HTML</h1>
+          <p>Oktober 2, 2023</p>
+        </div>
+        <p>
+          This is my first clone website made by nothing but JavaScript, CSS, and HTML. It took me quite some times to make, but it's worth it since i have to keep practicing my skills in web development. This website using
+          <span class="link"><a href="https://developer.nytimes.com/">nytimes API</a></span> .Join me as I take you through the steps and challenges I faced in the making of new york times clone website.
+        </p>
+        <h1>Step 1: HTML Skeleton</h1>
+        <p>
+          I began by designing the basic structure of my website using HTML. I divided the page into sections like header, navigation, main content area, and footer. Each section had its own HTML tags and elements to replicate
+          the structure of the New York Times site.
+        </p>
+        <h1>Step 2: Styling with CSS and Bootstrap 5</h1>
+        <p>
+          To make this website looks elegant, i began to search reference such what is new york times font used?, what colors they used?, responsive layout, and spacing. I've seen so many website of new york times clone so i
+          decided to learn how they created it. I used CSS flexbox to organize and position the various content section. From this step, i leant about CSS nth-child that i thought i would never use it. This can create a very
+          elegant layout
+        </p>
+        <h1>Step 3: Responsive Web</h1>
+        <div class="card-image article" style="display: flex; align-items: flex-end; justify-content: center; gap: 20px">
+          <img src="./img/responsivenytimes.png" alt="image" loading="lazy" decoding="async" style="width: 30%; height: 200px; object-fit: contain" />
+          <img src="./img/responsivenytimesdesktop.png" alt="image" loading="lazy" decoding="async" style="width: 50%" />
+        </div>
+        <p>This step is to make website accessible by both mobile and desktop device. I use media queries and flexible layout to ensure that my clone website adapted to different screen size</p>
+        <h1>Step 4: Dynamic Elements with JavaScript</h1>
+        <p>
+          One of the key features of the New York Times website is its dynamic navigation bar. To replicate this functionality, I used JavaScript to create a responsive menu that adapted to different screen sizes. To make my
+          clone feel alive, I used JavaScript to fetch real-time news articles and headlines from an API. This dynamic content gave my clone a sense of authenticity, just like the New York Times.
+        </p>
+        <h1>At Last!</h1>
+        <p>
+          Building a New York Times clone website from scratch was a challenging yet rewarding endeavor. It pushed my skills in HTML, CSS, Bootstrap,and JavaScript to new level. Throughout this project, I gained a deeper
+          appreciation for the work that goes into creating a sophisticated news website like the New York Times. <br /><br />While my clone may not have the vast resources and content of the original, it serves as a testament
+          to what can be achieved with determination, creativity, and a solid foundation in web development. I hope this journey inspires you to take on ambitious projects of your own and explore the limitless possibilities of
+          web development.
+        </p>
+      </div>
+    </div>
+  `,
   },
   {
     blogId: 2,
-    name: 'I made new york times clone using javascript!',
-    image: 'newsapp.png',
+    name: 'My Journey as a Newcomer of Web Developer',
+    image: 'webjourney.png',
     desc: 'daym 2',
-    detail: `<h1>
-           daym2
-          </h1>`,
+    detail: `
+    <div class="card-image article">
+      <img src="./img/webjourney.png" alt="image" loading="lazy" decoding="async" />
+    </div>
+    <div class="card-body">
+      <div class="card-detail">
+        <div class="title article">
+          <h1>Building a New York Times Clone Website from Scratch with JavaScript, CSS, and HTML</h1>
+          <p>Oktober 2, 2023</p>
+        </div>
+        <p>
+          This is my first clone website made by nothing but JavaScript, CSS, and HTML. It took me quite some times to make, but it's worth it since i have to keep practicing my skills in web development. This website using
+          <span class="link"><a href="https://developer.nytimes.com/">nytimes API</a></span> .Join me as I take you through the steps and challenges I faced in the making of new york times clone website.
+        </p>
+        <h1>Step 1: HTML Skeleton</h1>
+        <p>
+          I began by designing the basic structure of my website using HTML. I divided the page into sections like header, navigation, main content area, and footer. Each section had its own HTML tags and elements to replicate
+          the structure of the New York Times site.
+        </p>
+        <h1>Step 2: Styling with CSS and Bootstrap 5</h1>
+        <p>
+          To make this website looks elegant, i began to search reference such what is new york times font used?, what colors they used?, responsive layout, and spacing. I've seen so many website of new york times clone so i
+          decided to learn how they created it. I used CSS flexbox to organize and position the various content section. From this step, i leant about CSS nth-child that i thought i would never use it. This can create a very
+          elegant layout
+        </p>
+        <h1>Step 3: Responsive Web</h1>
+        <div class="card-image article" style="display: flex; align-items: flex-end; justify-content: center; gap: 20px">
+          <img src="./img/responsivenytimes.png" alt="image" loading="lazy" decoding="async" style="width: 30%; height: 200px; object-fit: contain" />
+          <img src="./img/responsivenytimesdesktop.png" alt="image" loading="lazy" decoding="async" style="width: 50%" />
+        </div>
+        <p>This step is to make website accessible by both mobile and desktop device. I use media queries and flexible layout to ensure that my clone website adapted to different screen size</p>
+        <h1>Step 4: Dynamic Elements with JavaScript</h1>
+        <p>
+          One of the key features of the New York Times website is its dynamic navigation bar. To replicate this functionality, I used JavaScript to create a responsive menu that adapted to different screen sizes. To make my
+          clone feel alive, I used JavaScript to fetch real-time news articles and headlines from an API. This dynamic content gave my clone a sense of authenticity, just like the New York Times.
+        </p>
+        <h1>At Last!</h1>
+        <p>
+          Building a New York Times clone website from scratch was a challenging yet rewarding endeavor. It pushed my skills in HTML, CSS, Bootstrap,and JavaScript to new level. Throughout this project, I gained a deeper
+          appreciation for the work that goes into creating a sophisticated news website like the New York Times. <br /><br />While my clone may not have the vast resources and content of the original, it serves as a testament
+          to what can be achieved with determination, creativity, and a solid foundation in web development. I hope this journey inspires you to take on ambitious projects of your own and explore the limitless possibilities of
+          web development.
+        </p>
+      </div>
+    </div>
+    `,
   },
 ];
 

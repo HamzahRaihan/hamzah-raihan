@@ -25,12 +25,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
-html {
-  height: 100%;
-}
-
 svg {
   fill: var(--fontPrimary);
+  width: 24px;
 }
 
 button {
@@ -42,10 +39,9 @@ body {
   min-height: 100%;
   margin: auto;
   background-color: var(--primaryColor);
-  position: relative;
   display: flex;
   align-items: center;
-  flex-flow: column;
+  flex-direction: column;
 }
 
 .container {
@@ -99,7 +95,7 @@ body {
 /*=====  End of scrollbar styling ======*/
 
 /*=============================================
-=                    button sytle            =
+=               button sytle                  =
 =============================================*/
 
 .btn-primary {
@@ -144,7 +140,63 @@ body {
   border: 2px solid;
 }
 
+.exit-button {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 4;
+  bottom: 5vh;
+  right: 7vw;
+  position: fixed;
+  border-radius: 6px;
+  background-color: var(--primaryColor);
+}
+
+@media screen and (max-width: 700px) {
+  .btn-primary {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .exit-button.btn-primary {
+    width: fit-content;
+  }
+}
+
 /*=====  End of button sytle  ======*/
+
+/*=============================================
+=            animation                       =
+=============================================*/
+
+.link {
+  width: fit-content;
+  position: relative;
+  color: var(--fontThird);
+  font-weight: 500;
+}
+
+.link:hover {
+  color: var(--fontSecondary);
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--fontPrimary);
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.link:hover::before {
+  width: 100%;
+}
+
+/*=====  End of animation              ======*/
 
 /*=============================================
 =            Nav Header                   =
@@ -291,14 +343,7 @@ header {
   justify-content: center;
   align-items: center;
   margin: auto;
-  border: 1px solid #2d3e4d;
-  border-radius: 100%;
-  background-color: var(--primaryColor);
-  transition: ease 1s;
-}
-
-.aside a:hover {
-  transform: rotate(360deg);
+  border: 0;
 }
 
 .sidebar .author {
@@ -464,14 +509,6 @@ footer {
   .vertical-line,
   .vertical-line-2 {
     display: none;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .btn-primary {
-    display: flex;
-    justify-content: center;
-    width: 100%;
   }
 }
 
@@ -751,32 +788,6 @@ article {
   font-size: large;
 }
 
-.place {
-  width: fit-content;
-  position: relative;
-  color: var(--fontThird);
-  font-weight: 500;
-}
-
-.place:hover {
-  color: var(--fontSecondary);
-}
-
-.place::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: var(--fontPrimary);
-  bottom: 0;
-  left: 0;
-  transition: width 0.3s ease;
-}
-
-.place:hover::before {
-  width: 100%;
-}
-
 .selection {
   display: flex;
   gap: 20px;
@@ -973,7 +984,7 @@ article {
   margin: 0;
 }
 
-.card-project {
+.card-wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -985,10 +996,15 @@ article {
   margin-bottom: 30px;
 }
 
+.card-wrapper:hover {
+  transform: translateY(-10px);
+}
+
 .card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   height: 100%;
   padding: 0 20px;
   font-size: small;
@@ -1052,12 +1068,12 @@ article {
 }
 
 @media screen and (max-width: 1200px) {
-  .card-project {
+  .card-wrapper {
     width: calc(50% - 10px);
   }
 }
 @media screen and (max-width: 600px) {
-  .card-project {
+  .card-wrapper {
     width: calc(100%);
   }
 }
@@ -1079,6 +1095,7 @@ article {
   border-radius: 12px;
   cursor: pointer;
   margin-bottom: 20px;
+  gap: 10px;
 }
 
 .card-blog .card-image {
@@ -1095,6 +1112,42 @@ article {
   max-width: 100%;
   height: 100%;
   border-radius: 6px;
+}
+
+.card-wrapper.article {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0);
+  cursor: default;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.title.article {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--fontPrimary);
+  padding-bottom: 10px;
+}
+
+.title.article h1 {
+  font-size: 2rem;
+}
+.article h1 {
+  font-size: 1.5rem;
+}
+
+.article p {
+  font-size: 1rem;
+}
+.article p span a {
+  color: var(--fontThird);
+}
+
+.card-image.article {
+  max-width: 100%;
 }
 
 @media screen and (max-width: 600px) {

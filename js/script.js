@@ -1,22 +1,22 @@
 import { blog, projects, tech, tools } from './datas.js';
 
 // * Particles JS Library
-particlesJS('particles-js', {
-  particles: {
-    number: { value: 80, density: { enable: true, value_area: 800 } },
-    color: { value: '#ffffff' },
-    shape: { type: 'circle', stroke: { width: 0, color: '#000000' }, polygon: { nb_sides: 5 }, image: { src: 'img/github.svg', width: 100, height: 100 } },
-    opacity: { value: 0.5, random: true, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
-    size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-    line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
-    move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } },
-  },
-  interactivity: {
-    detect_on: 'window',
-    events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'repulse' }, resize: true },
-    modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } },
-  },
-});
+// particlesJS('particles-js', {
+//   particles: {
+//     number: { value: 80, density: { enable: true, value_area: 800 } },
+//     color: { value: '#ffffff' },
+//     shape: { type: 'circle', stroke: { width: 0, color: '#000000' }, polygon: { nb_sides: 5 }, image: { src: 'img/github.svg', width: 100, height: 100 } },
+//     opacity: { value: 0.5, random: true, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+//     size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+//     line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+//     move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } },
+//   },
+//   interactivity: {
+//     detect_on: 'window',
+//     events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'repulse' }, resize: true },
+//     modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } },
+//   },
+// });
 
 // * Navbar Animation
 const navbar = document.querySelector('.navbar');
@@ -104,7 +104,7 @@ function education() {
     <div class="title">
       <h1>System Information</h1>
       <a href="https://www.instagram.com/official.unsika/" target="_blank" rel="noopener noreferrer">
-        <h1 class="place">@University of Singaperbangsa Karawang</h1>
+        <h1 class="link">@University of Singaperbangsa Karawang</h1>
       </a>
       <h4>Sep 2020 - Present</h4>
     </div>
@@ -123,7 +123,7 @@ function education() {
     <div class="title">
       <h1>Skilvul</h1>
       <a href="https://www.instagram.com/skilvul/" target="_blank" rel="noopener noreferrer">
-        <h1 class="place">@Fullstack Development</h1>
+        <h1 class="link">@Fullstack Development</h1>
       </a>
       <h4>Aug 2023 - Des 2023</h4>
     </div>
@@ -169,7 +169,7 @@ function workExperience() {
     <div class="title">
       <h1>Fullstack Developer</h1>
       <a href="https://www.instagram.com/diskominfopwk/" target="_blank" rel="noopener noreferrer">
-       <h1 class="place">@Dinas Komunikasi dan Informatika</h1>
+       <h1 class="link">@Dinas Komunikasi dan Informatika</h1>
       </a>
       <h4>Oct 2022 - Dec 2022</h4>
     </div>
@@ -208,7 +208,7 @@ function participation() {
     <div class="title">
       <h1>Scholarship for Learning Path of React Developer</h1>
       <a href="https://idcamp.ioh.co.id/" target="_blank" rel="noopener noreferrer">
-      <h1 class="place">@IDCamp Indosat</h1>
+      <h1 class="link">@IDCamp Indosat</h1>
       </a>
       <h4>Sep 2023 - Des 2023</h4>
     </div>
@@ -239,7 +239,7 @@ function participation() {
     <div class="title">
       <h1>Bapekraf Developer Day 2023 Participant</h1>
       <a href="https://bdd.kemenparekraf.go.id/" target="_blank" rel="noopener noreferrer">
-        <h1 class="place">@kemenparekraf</h1>
+        <h1 class="link">@kemenparekraf</h1>
       </a>
       <h4>May 2023</h4>
     </div>
@@ -267,7 +267,7 @@ function participation() {
     <div class="title">
       <h1>DevOps and Back-End Developer Scholarship Program</h1>
       <a href="https://aws.dicoding.com/?_gl=1*1g6u1vy*_gcl_au*OTY0NDM5MjY4LjE2ODg1MzAzODE." target="_blank" rel="noopener noreferrer">
-        <h1 class="place">@AWS x Dicoding</h1>
+        <h1 class="link">@AWS x Dicoding</h1>
       </a>
       <h4>Feb 2023</h4>
     </div>
@@ -303,7 +303,7 @@ function certification() {
     <div class="title">
       <h1>Course</h1>
       <a href="https://www.instagram.com/diskominfopwk/" target="_blank" rel="noopener noreferrer">
-       <h1 class="place">@Dicoding</h1>
+       <h1 class="link">@Dicoding</h1>
       </a>
     </div>
     <ul>
@@ -345,7 +345,7 @@ function certification() {
     <div class="title">
       <h1>Course</h1>
       <a href="https://www.instagram.com/skilvul/" target="_blank" rel="noopener noreferrer">
-       <h1 class="place">@Skilvul</h1>
+       <h1 class="link">@Skilvul</h1>
       </a>
     </div>
     <ul>
@@ -389,7 +389,7 @@ function certification() {
     <div class="title">
       <h1>Course</h1>
       <a href="https://www.sololearn.com/" target="_blank" rel="noopener noreferrer">
-       <h1 class="place">@Sololearn</h1>
+       <h1 class="link">@Sololearn</h1>
       </a>
     </div>
     <ul>
@@ -412,7 +412,7 @@ function certification() {
     <div class="title">
       <h1>Course</h1>
       <a href="https://www.sololearn.com/" target="_blank" rel="noopener noreferrer">
-       <h1 class="place">@Progate</h1>
+       <h1 class="link">@Progate</h1>
       </a>
     </div>
     <ul>
@@ -505,7 +505,7 @@ function getFilteredProjects(selectedCategory) {
 
 function showProjectsCard(prj) {
   return `
-  <div class="card-project" id='${prj.category}'>
+  <div class="card-wrapper" id='${prj.category}'>
     <div class="card-image">
       <img src="./img/${prj.image}" alt="image" loading="lazy" decoding="async"/>
     </div>
@@ -562,12 +562,16 @@ if (blogContainer !== null && blogContainer !== undefined) {
 
 blogContainer.addEventListener('click', (event) => {
   const card = event.target.closest('.card-blog');
+  const close = event.target.closest('.exit-button');
   if (card) {
     const blogId = card.dataset.blogId;
     const blogDetail = getBlogDetail(blogId);
     if (blogContainer) {
       blogContainer.innerHTML = blogDetail;
     }
+  }
+  if (close) {
+    blogContainer.innerHTML = cardArticles;
   }
 });
 
@@ -578,7 +582,7 @@ function getBlogDetail(blogId) {
 
 function blogList(item) {
   return `
-  <div class="card-blog card-project" data-blog-id="${item.blogId}">
+  <div class="card-blog card-wrapper" data-blog-id="${item.blogId}">
     <div class="card-image">
       <img src="./img/${item.image}" alt="image" loading="lazy" decoding="async" />
     </div>
@@ -598,8 +602,11 @@ function blogList(item) {
 
 function showBlogDetail(b) {
   return `
-  <div class="card-blog card-project">
+  <div class="card-blog card-wrapper article">
     ${b.detail}
+  </div>
+  <div class="exit-button btn-primary">
+    Back
   </div>
   `;
 }
