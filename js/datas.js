@@ -107,6 +107,16 @@ const projects = [
   },
   {
     id: 3,
+    name: 'Promptopia',
+    image: 'promptopia.png',
+    github: 'https://github.com/HamzahRaihan/promptopia-nextjs-app',
+    link: 'https://promptopia-nextjs-app.vercel.app/',
+    desc: 'This is my first dynamic website that using Next JS for fullstack and mongodb as a database. I built this website by following tutorial from javascript mastery. By creating this website i got motivated to learn and explore more about world of javascript',
+    stack: ['icons8-tailwind-css.svg', 'nextjs-icon-svgrepo-com.svg', 'icons8-javascript.svg', 'icons8-mongodb.svg', 'icons8-node-js.svg'],
+    category: 'website',
+  },
+  {
+    id: 4,
     name: 'Rock Paper Scissor',
     image: 'tailwind-rockpaper.png',
     github: 'https://github.com/HamzahRaihan/rock-paper-tailwind',
@@ -116,23 +126,13 @@ const projects = [
     category: 'website',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Pokemon React App',
     image: 'pokemonweb.png',
     github: 'https://github.com/HamzahRaihan/rock-paper-tailwind',
     link: 'https://pokemon-api-web-app.vercel.app/',
     desc: 'The Pokemon React App is a web application developed using React.js and JavaScript, built to serve an information around pokemon. Users can search for specific pokemon and will provide detail about pokemon that you searched..',
     stack: ['icons8-tailwind-css.svg', 'icons8-react.svg', 'icons8-javascript.svg'],
-    category: 'website',
-  },
-  {
-    id: 5,
-    name: 'Promptopia',
-    image: 'promptopia.png',
-    github: 'https://github.com/HamzahRaihan/promptopia-nextjs-app',
-    link: 'https://promptopia-nextjs-app.vercel.app/',
-    desc: 'This is my first dynamic website that using Next JS for fullstack and mongodb as a database. I built this website by following tutorial from javascript mastery. By creating this website i got motivated to learn and explore more about world of javascript',
-    stack: ['icons8-tailwind-css.svg', 'nextjs-icon-svgrepo-com.svg', 'icons8-javascript.svg', 'icons8-mongodb.svg', 'icons8-node-js.svg'],
     category: 'website',
   },
   {
@@ -213,6 +213,7 @@ const blog = [
     name: 'Building a New York Times Clone Website from Scratch with JavaScript, CSS, and HTML',
     image: 'newsapp.png',
     desc: "This is my first clone website made by nothing but JavaScript, CSS, and HTML. It took me quite some times to make, but it's worth it since i have to keep practicing my skills in web development.",
+    date: 'October 2, 2023',
     detail: `
     <div class="card-image article">
       <img src="./img/newsapp.png" alt="image" loading="lazy" decoding="async" />
@@ -264,7 +265,8 @@ const blog = [
     blogId: 2,
     name: 'My Journey as a Newcomer of Web Developer',
     image: 'webjourney.png',
-    desc: 'daym 2',
+    desc: 'When I first started my journey in web development, I had no idea what I was getting myself into. It was like diving into a vast ocean of coding languages, frameworks, and design principles.',
+    date: 'October 2, 2023',
     detail: `
     <div class="card-image article">
       <img src="./img/webjourney.png" alt="image" loading="lazy" decoding="async" />
@@ -272,41 +274,26 @@ const blog = [
     <div class="card-body">
       <div class="card-detail">
         <div class="title article">
-          <h1>Building a New York Times Clone Website from Scratch with JavaScript, CSS, and HTML</h1>
-          <p>Oktober 2, 2023</p>
+          <h1>My Journey as a Newcomer of Web Developer</h1>
+          <p>October 2, 2023</p>
         </div>
         <p>
-          This is my first clone website made by nothing but JavaScript, CSS, and HTML. It took me quite some times to make, but it's worth it since i have to keep practicing my skills in web development. This website using
-          <span class="link"><a href="https://developer.nytimes.com/">nytimes API</a></span> .Join me as I take you through the steps and challenges I faced in the making of new york times clone website.
+          When I first started my journey in web development, I had no idea what I was getting myself into. It was like diving into a vast ocean of coding languages, frameworks, and design principles. But with determination and a little bit of googling, I slowly began to navigate my way through the world of web development. From learning the basics of HTML and CSS to mastering JavaScript and responsive design, every step of this journey has been a thrilling adventure. And now, after months of hard work and an incredible internship at Dinas komunikasi dan informasi, I can proudly say that I have gone from a beginner to a pro in web development.
         </p>
-        <h1>Step 1: HTML Skeleton</h1>
         <p>
-          I began by designing the basic structure of my website using HTML. I divided the page into sections like header, navigation, main content area, and footer. Each section had its own HTML tags and elements to replicate
-          the structure of the New York Times site.
+          Starting as a beginner in web development has been both challenging and rewarding. It may seem like an intimidating task, but let me assure you, it is the best place to begin. Why? Because being a beginner means you have a clean slate and limitless potential. There is so much beauty in starting from scratch and building your skills from the ground up.
         </p>
-        <h1>Step 2: Styling with CSS and Bootstrap 5</h1>
         <p>
-          To make this website looks elegant, i began to search reference such what is new york times font used?, what colors they used?, responsive layout, and spacing. I've seen so many website of new york times clone so i
-          decided to learn how they created it. I used CSS flexbox to organize and position the various content section. From this step, i leant about CSS nth-child that i thought i would never use it. This can create a very
-          elegant layout
+          One of the most exciting aspects of starting as a beginner is the rapid progress you'll make. Every small milestone that you achieve feels like a victory. From writing your first line of code to successfully designing your first webpage, each step forward fuels your enthusiasm and keeps you motivated.
         </p>
-        <h1>Step 3: Responsive Web</h1>
-        <div class="card-image article" style="display: flex; align-items: flex-end; justify-content: center; gap: 20px">
-          <img src="./img/responsivenytimes.png" alt="image" loading="lazy" decoding="async" style="width: 30%; height: 200px; object-fit: contain" />
-          <img src="./img/responsivenytimesdesktop.png" alt="image" loading="lazy" decoding="async" style="width: 50%" />
-        </div>
-        <p>This step is to make website accessible by both mobile and desktop device. I use media queries and flexible layout to ensure that my clone website adapted to different screen size</p>
-        <h1>Step 4: Dynamic Elements with JavaScript</h1>
         <p>
-          One of the key features of the New York Times website is its dynamic navigation bar. To replicate this functionality, I used JavaScript to create a responsive menu that adapted to different screen sizes. To make my
-          clone feel alive, I used JavaScript to fetch real-time news articles and headlines from an API. This dynamic content gave my clone a sense of authenticity, just like the New York Times.
+          Moreover, starting as a beginner allows you to explore different programming languages and frameworks without any preconceived notions. You have the freedom to experiment and find what truly excites you. Whether you enjoy the structure of HTML and CSS or the logic of JavaScript, the possibilities are endless.
         </p>
-        <h1>At Last!</h1>
         <p>
-          Building a New York Times clone website from scratch was a challenging yet rewarding endeavor. It pushed my skills in HTML, CSS, Bootstrap,and JavaScript to new level. Throughout this project, I gained a deeper
-          appreciation for the work that goes into creating a sophisticated news website like the New York Times. <br /><br />While my clone may not have the vast resources and content of the original, it serves as a testament
-          to what can be achieved with determination, creativity, and a solid foundation in web development. I hope this journey inspires you to take on ambitious projects of your own and explore the limitless possibilities of
-          web development.
+          As a beginner, you also have access to numerous online resources, tutorials, and communities that are specifically tailored to help you in your journey. Learning web development has never been easier, with platforms like Codecademy, Udemy, and YouTube offering a wealth of knowledge at your fingertips.
+        </p>
+        <p>
+          Embrace your beginner status and embark on this joyful journey of learning web development. Don't be afraid to make mistakes and ask for help along the way. Remember, every expert was once a beginner, and each step you take brings you closer to becoming a pro.
         </p>
       </div>
     </div>

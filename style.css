@@ -221,16 +221,6 @@ nav a:hover {
   color: var(--fontPrimary);
 }
 
-li:first-child {
-  list-style: none;
-}
-
-li {
-  list-style-type: decimal-leading-zero;
-  list-style-position: inside;
-  font-size: smaller;
-}
-
 header {
   display: flex;
   flex-direction: row;
@@ -252,6 +242,16 @@ header {
   transition: all 0.5s;
   width: 100%;
   padding: 0 50px;
+}
+
+.navbar li:first-child {
+  list-style: none;
+}
+
+.navbar li {
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+  font-size: smaller;
 }
 
 .navbar.show {
@@ -570,8 +570,9 @@ h2 span.stop-blinking::before {
   z-index: 1;
 }
 
-.project img {
-  width: 100%;
+.image-project img {
+  max-width: 500px;
+  height: 100%;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -623,15 +624,18 @@ h2 span.stop-blinking::before {
   display: flex;
   justify-content: flex-end;
   flex-flow: row;
-  gap: 5px;
+  gap: 10px;
 }
 
 .list li {
   list-style: none !important;
   text-decoration: none !important;
   border-radius: 5px;
-  padding: 5px 10px;
   cursor: default;
+}
+
+.project-tech img {
+  width: 24px;
 }
 
 .project-tech li:hover {
@@ -655,11 +659,12 @@ h2 span.stop-blinking::before {
     margin: 20px 0;
   }
 
-  .project img {
-    width: 100%;
-    border-radius: 12px;
+  .image-project img {
+    max-width: 100%;
   }
-
+  .project-tech img {
+    width: 24px;
+  }
   .project-box {
     margin: 0;
   }
