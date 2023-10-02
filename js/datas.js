@@ -207,6 +207,25 @@ const projects = [
   },
 ];
 
-console.log(projects[1].stack);
+const blog = [
+  {
+    blogId: 1,
+    name: 'I made new york times clone using javascript!',
+    image: 'newsapp.png',
+    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa minima in amet at alias! Magni, laudantium? Error sed provident saepe optio ad, aspernatur dignissimos pariatur, ex maxime consequuntur doloremque quaerat.',
+    detail: `<h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsum ea, quod consequatur explicabo obcaecati non corporis, delectus ad optio ratione, possimus dignissimos. Quos commodi amet tempore iure ex consectetur!
+          </h1>`,
+  },
+  {
+    blogId: 2,
+    name: 'I made new york times clone using javascript!',
+    image: 'newsapp.png',
+    desc: 'daym 2',
+    detail: `<h1>
+           daym2
+          </h1>`,
+  },
+];
 
-export { tech, tools, projects };
+export { tech, tools, projects, blog };

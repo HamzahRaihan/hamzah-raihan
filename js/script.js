@@ -1,4 +1,4 @@
-import { projects, tech, tools } from './datas.js';
+import { blog, projects, tech, tools } from './datas.js';
 
 // * Particles JS Library
 particlesJS('particles-js', {
@@ -71,13 +71,10 @@ overlay.addEventListener('click', () => toggleBurgerButton());
 
 // selection active
 const selected = document.querySelectorAll('.select div');
-console.log('🚀 ~ file: script.js:73 ~ selected:', selected);
 const selectContainer = document.querySelector('.select-detail');
-console.log('🚀 ~ file: script.js:85 ~ selectContainer:', selectContainer);
 
 selected.forEach((btn) => {
   btn.addEventListener('click', () => {
-    console.log(btn.textContent);
     if (btn.textContent === 'Education') {
       selectContainer.innerHTML = education();
     } else if (btn.textContent === 'Work Experience') {
@@ -486,6 +483,15 @@ if (projectCardContainer !== null && projectCardContainer !== undefined) {
 }
 
 // filter project by category
+const buttonsProject = document.querySelectorAll('.category');
+
+buttonsProject.forEach((button) => {
+  const selectedCategory = button.value;
+  button.addEventListener('click', () => {
+    selectedCategory == 'all' ? getAllProject() : getFilteredProjects(selectedCategory);
+  });
+});
+
 function getAllProject() {
   const projectList = projects.map((prj) => showProjectsCard(prj)).join('');
   projectCardContainer.innerHTML = projectList;
@@ -497,19 +503,12 @@ function getFilteredProjects(selectedCategory) {
   projectCardContainer.innerHTML = filtered;
 }
 
-const buttonsProject = document.querySelectorAll('.category');
-
-buttonsProject.forEach((button) => {
-  button.addEventListener('click', () => {
-    const selectedCategory = button.value;
-    selectedCategory == 'all' ? getAllProject() : getFilteredProjects(selectedCategory);
-  });
-});
-
 function showProjectsCard(prj) {
   return `
   <div class="card-project" id='${prj.category}'>
-    <img src="./img/${prj.image}" alt="image" loading="lazy"/>
+    <div class="card-image">
+      <img src="./img/${prj.image}" alt="image" loading="lazy" decoding="async"/>
+    </div>
     <div class="card-body">
       <div class="card-detail">
         <div class="title">
@@ -549,6 +548,58 @@ function showProjectsCard(prj) {
       ${prj.stack.map((s) => `<img src="./svg/${s}" alt="icon" />`).join('')}
       </div>
     </div>
+  </div>
+  `;
+}
+
+// show blog list
+const blogContainer = document.querySelector('.blog');
+const cardArticles = blog.map((item) => blogList(item)).join('');
+
+if (blogContainer !== null && blogContainer !== undefined) {
+  blogContainer.innerHTML = cardArticles;
+}
+
+blogContainer.addEventListener('click', (event) => {
+  const card = event.target.closest('.card-blog');
+  if (card) {
+    const blogId = card.dataset.blogId;
+    const blogDetail = getBlogDetail(blogId);
+    if (blogContainer) {
+      blogContainer.innerHTML = blogDetail;
+    }
+  }
+});
+
+function getBlogDetail(blogId) {
+  const blogItem = blog.find((b) => b.blogId == blogId);
+  return showBlogDetail(blogItem);
+}
+
+function blogList(item) {
+  return `
+  <div class="card-blog card-project" data-blog-id="${item.blogId}">
+    <div class="card-image">
+      <img src="./img/${item.image}" alt="image" loading="lazy" decoding="async" />
+    </div>
+    <div class="card-body">
+      <div class="card-detail">
+        <div class="title">
+          <h3>${item.name}</h3>
+        </div>
+        <p>
+          ${item.desc}
+        </p>
+      </div>
+    </div>
+  </div>
+  `;
+}
+
+function showBlogDetail(b) {
+  return `
+  <div class="card-blog card-project">
+    ${b.detail}
   </div>
   `;
 }
