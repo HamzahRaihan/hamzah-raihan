@@ -617,7 +617,7 @@ h2 span.stop-blinking::before {
   border-radius: 12px;
   padding: 20px;
   margin-left: -40px;
-  z-index: 10;
+  z-index: 1;
 }
 
 .list ul {
