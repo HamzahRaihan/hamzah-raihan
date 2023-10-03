@@ -68,7 +68,7 @@ burgerButton.addEventListener('click', () => toggleBurgerButton());
 exitButton.addEventListener('click', () => toggleBurgerButton());
 overlay.addEventListener('click', () => toggleBurgerButton());
 
-// Landing page Featured Project
+// * Landing page Featured Project
 const featuredContainer = document.querySelector('.featured-container');
 const featuredItem = projects
   .slice(0, 3)

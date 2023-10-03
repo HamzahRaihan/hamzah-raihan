@@ -145,7 +145,7 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  z-index: 4;
+  z-index: 999;
   bottom: 5vh;
   right: 7vw;
   position: fixed;
@@ -1205,10 +1205,9 @@ footer {
     display: flex;
     border-top: 1px solid var(--fontPrimary);
     margin-top: 20px;
-    padding: 20px 10%;
+    padding: 20px 0;
     gap: 20px;
     width: 100%;
-    z-index: 1;
   }
 }
 
