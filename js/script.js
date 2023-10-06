@@ -638,29 +638,31 @@ if (blogContainer !== null && blogContainer !== undefined) {
   });
 }
 
-function getBlogDetail(blogId) {
-  const blogItem = blog.find((b) => b.blogId == blogId);
-  return showBlogDetail(blogItem);
-}
+// function getBlogDetail(blogId) {
+//   const blogItem = blog.find((b) => b.blogId == blogId);
+//   return showBlogDetail(blogItem);
+// }
 
 function blogList(item) {
   return `
-  <div class="card-blog card-wrapper" data-blog-id="${item.blogId}">
-    <div class="card-image">
-      <img src="./img/${item.image}" alt="image" loading="lazy" decoding="async" />
-    </div>
-    <div class="card-body">
-      <div class="card-detail">
-        <div class="title">
-          <h3>${item.name}</h3>
+  <a href="blog-detail.html?blogId=${item.blogId}">
+    <div class="card-blog card-wrapper" data-blog-id="${item.blogId}">
+      <div class="card-image">
+        <img src="./img/${item.image}" alt="image" loading="lazy" decoding="async" />
+      </div>
+      <div class="card-body">
+        <div class="card-detail">
+          <div class="title">
+            <h3>${item.name}</h3>
+          </div>
+          <p>${item.date}</p>
+          <p>
+            ${item.desc}
+          </p>
         </div>
-        <p>${item.date}</p>
-        <p>
-          ${item.desc}
-        </p>
       </div>
     </div>
-  </div>
+  </a>
   `;
 }
 
@@ -673,4 +675,24 @@ function showBlogDetail(b) {
     Back
   </div>
   `;
+}
+
+// * blog detail page
+
+function getBlogIdFromURL() {
+  const searchParams = new URLSearchParams(window.location.search);
+  return searchParams.get('blogId');
+}
+
+function displayBlogDetail() {
+  const detailContainer = document.querySelector('.blog-detail');
+  const blogId = getBlogIdFromURL();
+  const blogItem = blog.find((b) => b.blogId == blogId);
+
+  if (blogItem) {
+    showBlogDetail();
+    detailContainer.innerHTML = showBlogDetail();
+  } else {
+    detailContainer.innerHTML = `<p>Blog not Found</p>`;
+  }
 }
