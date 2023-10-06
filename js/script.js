@@ -1,4 +1,3 @@
-import { blog, projects, tech, tools } from './datas.js';
 import { navbar, burgerButton, exitButton, sidebar, overlay } from './dom/dom.js';
 
 // * Particles JS Library
@@ -66,5 +65,3 @@ export function handlerBurgerButton() {
   exitButton.addEventListener('click', () => toggleBurgerButton());
   overlay.addEventListener('click', () => toggleBurgerButton());
 }
-
-// * Card Project
