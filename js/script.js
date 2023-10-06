@@ -621,22 +621,22 @@ if (blogContainer !== null && blogContainer !== undefined) {
   blogContainer.innerHTML = cardArticles;
 }
 
-if (blogContainer !== null && blogContainer !== undefined) {
-  blogContainer.addEventListener('click', (event) => {
-    const card = event.target.closest('.card-blog');
-    const close = event.target.closest('.exit-button');
-    if (card) {
-      const blogId = card.dataset.blogId;
-      const blogDetail = getBlogDetail(blogId);
-      if (blogContainer) {
-        blogContainer.innerHTML = blogDetail;
-      }
-    }
-    if (close) {
-      blogContainer.innerHTML = cardArticles;
-    }
-  });
-}
+// if (blogContainer !== null && blogContainer !== undefined) {
+//   blogContainer.addEventListener('click', (event) => {
+//     const card = event.target.closest('.card-blog');
+//     const close = event.target.closest('.exit-button');
+//     if (card) {
+//       const blogId = card.dataset.blogId;
+//       const blogDetail = getBlogDetail(blogId);
+//       if (blogContainer) {
+//         blogContainer.innerHTML = blogDetail;
+//       }
+//     }
+//     if (close) {
+//       blogContainer.innerHTML = cardArticles;
+//     }
+//   });
+// }
 
 // function getBlogDetail(blogId) {
 //   const blogItem = blog.find((b) => b.blogId == blogId);
@@ -666,33 +666,30 @@ function blogList(item) {
   `;
 }
 
-function showBlogDetail(b) {
-  return `
-  <div class="card-blog card-wrapper article">
-    ${b.detail}
-  </div>
-  <div class="exit-button btn-primary">
-    Back
-  </div>
-  `;
-}
-
 // * blog detail page
-
 function getBlogIdFromURL() {
   const searchParams = new URLSearchParams(window.location.search);
   return searchParams.get('blogId');
 }
 
 function displayBlogDetail() {
-  const detailContainer = document.querySelector('.blog-detail');
+  const detailContainer = document.querySelector('.detail-container');
   const blogId = getBlogIdFromURL();
   const blogItem = blog.find((b) => b.blogId == blogId);
-
+  console.log(blogItem);
   if (blogItem) {
-    showBlogDetail();
-    detailContainer.innerHTML = showBlogDetail();
+    detailContainer.innerHTML = showBlogDetail(blogItem);
   } else {
     detailContainer.innerHTML = `<p>Blog not Found</p>`;
   }
 }
+
+function showBlogDetail(b) {
+  return `
+  <div class="card-blog card-wrapper article">
+    ${b.detail}
+  </div>
+  `;
+}
+
+window.addEventListener('DOMContentLoaded', displayBlogDetail);
