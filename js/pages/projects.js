@@ -6,8 +6,6 @@ handleNavbar();
 
 handlerBurgerButton();
 
-projectCardContainer.innerHTML = projectList;
-
 // * filter project by category
 buttonsProject.forEach((button) => {
   const selectedCategory = button.value;
@@ -21,6 +19,8 @@ function getAllProject() {
   const projectList = projects.map((prj) => showProjectsCard(prj)).join('');
   projectCardContainer.innerHTML = projectList;
 }
+
+getAllProject();
 
 // * find project by filter
 function getFilteredProjects(selectedCategory) {
