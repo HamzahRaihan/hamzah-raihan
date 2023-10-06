@@ -1,10 +1,14 @@
-// * show blog list
-const blogContainer = document.querySelector('.blog');
-const cardArticles = blog.map((item) => blogList(item)).join('');
+import { blog } from '../datas.js';
+import { handleNavbar, handlerBurgerButton } from '../script.js';
+import { blogContainer } from '../dom/dom.js';
 
-if (blogContainer !== null && blogContainer !== undefined) {
-  blogContainer.innerHTML = cardArticles;
-}
+handleNavbar();
+
+handlerBurgerButton();
+
+// * show blog list
+const cardArticles = blog.map((item) => blogList(item)).join('');
+blogContainer.innerHTML = cardArticles;
 
 // if (blogContainer !== null && blogContainer !== undefined) {
 //   blogContainer.addEventListener('click', (event) => {
