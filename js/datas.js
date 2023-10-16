@@ -299,6 +299,46 @@ const blog = [
     </div>
     `,
   },
+  {
+    blogId: 3,
+    name: 'Pengalaman Saya Dalam Mengikuti Program DevHandal',
+    image: 'devhandalevent.png',
+    desc: 'Saya sangat merekomendasikan program ini kepada siapa saja yang ingin meningkatkan keterampilan mereka dalam teknologi awan dan memajukan karir mereka. Jangan ragu untuk mengambil langkah ini, karena ini bisa menjadi titik awal yang akan membawa Anda ke puncak karir Anda.',
+    detail: `
+    <div class="card-image article">
+      <img src="./img/devhandalevent.png" alt="image" loading="lazy" decoding="async" />
+    </div>
+    <div class="card-body">
+      <div class="card-detail">
+        <div class="title article">
+          <h1>Pengalaman Saya Dalam Mengikuti Program DevHandal</h1>
+          <p>October 17, 2023</p>
+        </div>
+        <p>
+          Terkadang, perubahan dalam hidup kita datang dari keputusan yang sepertinya kecil. Bagi saya, keputusan untuk mengikuti program DevHandal dan mendapatkan sertifikasi Certified Developer dari Alibaba Cloud adalah salah satu dari keputusan tersebut. Dalam blog post ini, saya ingin berbagi pengalaman saya tentang bagaimana program ini telah mengubah arah karir saya dan membuka pintu untuk peluang yang menakjubkan di dunia teknologi.
+        </p>
+        <h1>Apa itu DevHandal?</h1>
+        <p>
+          Developer Handal adalah program beasiswa belajar coding online selama 1 tahun secara gratis. DeveloperHandal menawarkan pendidikan online yang berkualitas dan akses ke sertifikasi developer internasional.
+        </p>
+        <h1>Mengapa saya memilih DevHandal</h1>
+        <div class="card-image article" style="display: flex; align-items: flex-end; justify-content: center; gap: 20px">
+          <img src="./img/alibabacert.jpg" alt="image" loading="lazy" decoding="async" style="width: 50%; height: 200px; object-fit: contain" />
+        </div>
+        <p>
+          Alibaba Cloud adalah salah satu penyedia layanan awan yang paling berpengaruh di dunia, dan sertifikasi dari mereka dianggap sebagai tanda kualitas yang tinggi di industri ini. Program DevHandal menawarkan kombinasi pelatihan teknis yang mendalam dan persiapan yang baik untuk ujian sertifikasi Alibaba Cloud, yang membuatnya menjadi pilihan yang sempurna bagi saya.
+        </p>
+         <h1>Pengalaman saya mengikuti program</h1>
+        <p>
+          Saat mengikuti program DevHandal, saya merasa terkesan dengan kualitas instruksi dan materi yang diajarkan. Instruktur kami adalah ahli dalam teknologi awan dan memberikan wawasan yang berharga tentang praktik terbaik dalam pengelolaan awan. Kami juga diberi tugas dan proyek praktis yang memungkinkan kami menerapkan apa yang telah kita pelajari.
+        </p>
+        <p>
+         Mengikuti program DevHandal dan mendapatkan sertifikasi Certified Developer dari Alibaba Cloud adalah salah satu keputusan terbaik dalam karir saya. Program ini tidak hanya meningkatkan pengetahuan teknis saya tentang teknologi awan, tetapi juga memberi saya kepercayaan diri yang lebih besar dalam berkarir di dunia IT.
+        </p>
+      </div>
+    </div>
+    `,
+  },
 ];
 
 export { tech, tools, projects, blog };
