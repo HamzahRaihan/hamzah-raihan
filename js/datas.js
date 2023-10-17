@@ -304,6 +304,7 @@ const blog = [
     name: 'Pengalaman Saya Dalam Mengikuti Program DevHandal',
     image: 'devhandalevent.png',
     desc: 'Saya sangat merekomendasikan program ini kepada siapa saja yang ingin meningkatkan keterampilan mereka dalam teknologi awan dan memajukan karir mereka. Jangan ragu untuk mengambil langkah ini, karena ini bisa menjadi titik awal yang akan membawa Anda ke puncak karir Anda.',
+    date: 'October 17, 2023',
     detail: `
     <div class="card-image article">
       <img src="./img/devhandalevent.png" alt="image" loading="lazy" decoding="async" />
